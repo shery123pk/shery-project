@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Facebook, Github, Instagram, Twitter } from 'lucide-react'
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -114,11 +115,11 @@ export default function Footer() {
             Shop.co © 2000-2023. All Rights Reserved
           </p>
           <div className="flex gap-4">
-  <img src="/images/visa.png" alt="Visa" className="h-[40px] w-[50px]" />
-  <img src="/images/circle.png" alt="Mastercard" className="h-[40px] w-[50px]" />
-  <img src="/images/paypal.png" alt="PayPal" className="h-[40px] w-[50px]" />
-  <img src="/images/pay.png" alt="Apple Pay" className="h-[40px] w-[50px]" />
-  <img src="/images/g pay.png" alt="Google Pay" className="h-[40px] w-[50px]" />
+  <Image src="/images/visa.png" alt="Visa"  className="h-[40px] w-[50px]" />
+  <Image src="/images/circle.png" alt="Mastercard" className="h-[40px] w-[50px]" />
+  <Image src="/images/paypal.png" alt="PayPal" className="h-[40px] w-[50px]" />
+  <Image src="/images/pay.png" alt="Apple Pay" className="h-[40px] w-[50px]" />
+  <Image src="/images/g pay.png" alt="Google Pay" className="h-[40px] w-[50px]" />
 </div>
 
         </div>
