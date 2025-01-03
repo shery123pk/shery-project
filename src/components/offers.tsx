@@ -1,29 +1,22 @@
-import React from 'react'
-import { Button } from './ui/button'
-import { Input } from './ui/input'
+import { MdOutlineEmail } from "react-icons/md";
+import { FaSearchengin } from "react-icons/fa6";
 
-function Offers() {
-  return (
-    <main className=' w-[1240px] h-[180px] bg-black text-white rounded-2xl flex justify-around items-center m-auto'>
-        <div>
-            <h1 className='text-[40px] font-bold '>STAY UPTO DATE ABOUT <br /> OUR LATEST OFFERS</h1>
-        </div>
-        <div>
-        <Input
-    type="email"
-    placeholder="Enter your email address"
-    className="bg-white text-gray-400 rounded-full px-6 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
-  />
-  <Button
-    variant="secondary"
-    className="whitespace-nowrap bg-white text-black rounded-full px-6 py-3 shadow-md hover:bg-gray-200 transition-all duration-300 mt-3"
-  >
-    Subscribe to Newsletter
-  </Button>
-        </div>
-   
-    </main>
-  )
+export default function Offers(){
+    return(
+        <main className="w-full flex justify-center items-center  max-w-screen-2xl mx-auto">
+            <div className="w-[80%] h-full sm:h-[150px] bg-black text-white flex flex-col sm:flex-row items-center p-5 rounded-[20px] ">
+               <h1 className="text-2xl sm:text-4xl font-extrabold">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h1>
+               <div className="space-y-3">
+                      <div className="flex  justify-start items-center sm:w-[330px] h-[40px] rounded-[62px] bg-[#F0F0F0]">
+                          <MdOutlineEmail className="text-xl ml-2 text-black"/>
+                          <input placeholder="search item..." className="w-full ml-2 outline-none h-full rounded-[62px]   bg-[#F0F0F0] "></input>
+                       </div>
+                       <div className="flex  justify-center items-center sm:w-[330px] h-[40px] rounded-[62px] bg-[#F0F0F0]">
+                         <p className="text-black">Subscribe to Newsletter</p>
+                       </div>
+
+               </div>
+            </div>
+        </main>
+    )
 }
-
-export default Offers

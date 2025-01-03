@@ -1,21 +1,18 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-
-import { IoMdMenu } from "react-icons/io";
+import { TiThMenu } from "react-icons/ti";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
 import Link from "next/link";
+import { NavigationMenuDemo } from "./NavigationMenu";
 
-const SHEET_SIDES = [ "left"] as const
+const SHEET_SIDES = ["left"] as const
 
 type SheetSide = (typeof SHEET_SIDES)[number]
 
@@ -25,21 +22,25 @@ export function SheetSide() {
       {SHEET_SIDES.map((side) => (
         <Sheet key={side}>
           <SheetTrigger asChild className="md:hidden">
-            <Button >
-            <IoMdMenu/>
+            <Button variant={"outline"}>
+                <TiThMenu/>
             </Button>
-          </SheetTrigger >
+          </SheetTrigger>
           <SheetContent side={side}>
-          <ul className=''>
-            <li className='grid grid-cols-1 gap-y-4'>
-
-            <Link href="#" className="text-sm">On Sale</Link>
-            <Link href="#" className="text-sm">New Arrivals</Link>
-            <Link href="#" className="text-sm">Brands</Link>
-            
-            </li>
-          </ul>
-            
+            <SheetHeader>
+              <SheetTitle>Shop.co</SheetTitle>
+             
+            </SheetHeader>
+              {/* navbav */}
+            <ul className="">
+                <li className="grid grid-cols-1 gap-y-4">
+                    <Link href={""}> <NavigationMenuDemo/></Link>
+                    <Link className="ml-3" href={""}>On Sale</Link>
+                    <Link className="ml-3" href={""}>New Arrivals</Link>
+                    <Link className="ml-3" href={""}>Brands</Link>
+                </li>
+            </ul>
+             
           </SheetContent>
         </Sheet>
       ))}

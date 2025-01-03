@@ -1,30 +1,27 @@
 
-import Fonts from "@/components/font";
-import Footer from "@/components/footer";
-import Hero from "@/components/hero";
-import UpperHeader from "@/components/upperHeader";
-import Products from "./product/page";
-import Top_sell from "./product/sell";
+import Fonts from "@/components/fonts";
+
+import Hero from "@/components/Hero";
+import Products from "./products/page";
+import Top_sell from "./products/sell";
 import Dress from "@/components/dress";
-import CustomerCarousel, { CarouselSpacing } from "@/components/carousel";
-import Offers from "@/components/offers";
+import CustomerCarousel from "@/components/couresel";
+import Footer from "@/components/footer";
+
 
 
 export default function Home() {
   return (
-    <>
-   <UpperHeader/>
-   <Hero/>
-   <Fonts/>
-   <Products/>
-   <Top_sell/>
-   <Dress/>
-   {/* <CarouselSpacing/> */}
-   <CustomerCarousel/>
-   <Offers/>
-   <Footer/>
-   
-    
-    </>
+    <div >
+       
+       <Hero/>
+       <Fonts/>
+       <Products/>
+       <Top_sell/>
+       <Dress/>
+       <CustomerCarousel/>
+      
+    </div>  
   );
 }
+ 

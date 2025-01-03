@@ -1,130 +1,84 @@
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Facebook, Github, Instagram, Twitter } from 'lucide-react'
-import Image from "next/image"
+import { FaInstagram } from "react-icons/fa";
+import Offers from "./offers";
+import { FaFacebook, FaGithub, FaTwitter } from "react-icons/fa6";
 
-export default function Footer() {
-  return (
-    <footer className="w-full bg-white">
-      {/* Newsletter Section */}
-      <div className="bg-black text-white px-4 py-12">
-        <div className="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
-          <h2 className="text-3xl md:text-4xl font-bold max-w-md">
-            STAY UP TO DATE ABOUT OUR LATEST OFFERS
-          </h2>
-          <div className="flex-col sm:flex-row gap-2 w-full md:w-auto">
-          <div className="flex flex-col gap-2">
-  {/* Input Field */}
-  <Input
-    type="email"
-    placeholder="Enter your email address"
-    className="bg-white text-black rounded-full px-6 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
-  />
-  
-  {/* Button */}
-  <Button
-    variant="secondary"
-    className="whitespace-nowrap bg-white text-black rounded-full px-6 py-3 shadow-md hover:bg-gray-200 transition-all duration-300"
-  >
-    Subscribe to Newsletter
-  </Button>
-</div>
+import Image from "next/image";
+
+
+
+export default function Footer(){
+    return (
+        <main className="bg-[#F0F0F0] w-full h-full md:h-[450px] relative mt-32  max-w-screen-2xl mx-auto">
+          {/*  */}
+          <span className="absolute top-[-80px]">
+          <Offers/>
+          </span>
+        {/* container */}
+        <div  className="flex h-full md:h-[400px] flex-col md:flex-row justify-between items-start p-5 pt-[160px] sm:pt-32 border-b ">
+          {/* top div */}
+          <div className="flex flex-col justify-center items-center w-[200px]"> 
+            <ul>
+                <h2 className="text-2xl sm:text-3xl font-extrabold">SHOP.CO</h2>
+                <p className="text-sm mt-1"> We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
+                   {/* icon */}
+                   <div className="flex items-center space-x-3 mt-1">
+                    <FaInstagram className="text-xl"/>
+                     <FaFacebook className="text-xl"/>
+                       <FaGithub className="text-xl"/>
+                      <FaTwitter className="text-xl"/>
+                   </div>
+            </ul>
+          </div>
+          {/* mid div */}
+          <div className="w-full md:w-[900px] grid grid-cols-2 sm:grid-cols-4 place-items-center space-y-4">
+              {/* box 1 */}
+                 <ul className="space-y-3 ">
+                   <h2 className="text-sm sm:text-2xl">Company</h2>
+                   <li  className="text-sm">About Us</li>
+                   <li  className="text-sm">Our Services</li>
+                   <li  className="text-sm">Privacy Policy</li>
+                   <li  className="text-sm">Terms and Conditions</li>
+                   </ul>
+                {/* box 2 */}
+                <ul className="space-y-3">
+                   <h2 className="text-sm sm:text-2xl">Company</h2>
+                   <li  className="text-sm">About Us</li>
+                   <li  className="text-sm">Our Services</li>
+                   <li  className="text-sm">Privacy Policy</li>
+                   <li  className="text-sm">Terms and Conditions</li>
+                   </ul>
+                {/* box 3*/}
+                <ul className="space-y-3">
+                   <h2 className="text-sm sm:text-2xl">Company</h2>
+                   <li  className="text-sm">About Us</li>
+                   <li  className="text-sm">Our Services</li>
+                   <li  className="text-sm">Privacy Policy</li>
+                   <li  className="text-sm">Terms and Conditions</li>
+                   </ul>
+                {/* box 4 */}
+                <ul className="space-y-3">
+                   <h2 className=" text-sm sm:text-2xl">Company</h2>
+                   <li className="text-sm">About Us</li>
+                   <li className="text-sm">Our Services</li>
+                   <li className="text-sm">Privacy Policy</li>
+                   <li className="text-sm">Terms and Conditions</li>
+                   </ul>
+                {/* complete boxes*/}
 
           </div>
+           
         </div>
-      </div>
-
-      {/* Main Footer */}
-      <div className="container mx-auto max-w-6xl px-4 py-12">
-  <div className="grid grid-cols-1 md:grid-cols-6 gap-50">
-    
-    {/* Brand Section */}
-    <div className="md:col-span-2">
-      <h2 className="text-2xl font-bold mb-4">SHOP.CO</h2>
-      <p className="text-gray-600 mb-6">
-        We have clothes that suits your style and which you're proud to wear. From women to men.
-      </p>
-      <div className="flex gap-4">
-        <a href="#" className="hover:opacity-80">
-          <Twitter className="w-6 h-6" />
-        </a>
-        <a href="#" className="hover:opacity-80">
-          <Facebook className="w-6 h-6" />
-        </a>
-        <a href="#" className="hover:opacity-80">
-          <Instagram className="w-6 h-6" />
-        </a>
-        <a href="#" className="hover:opacity-80">
-          <Github className="w-6 h-6" />
-        </a>
-      </div>
-    </div>
-
-    {/* Company Links */}
-    <div>
-      <h3 className="font-bold mb-4">COMPANY</h3>
-      <ul className="space-y-3">
-        <li><a href="#" className="text-gray-600 hover:text-gray-900">About</a></li>
-        <li><a href="#" className="text-gray-600 hover:text-gray-900">Features</a></li>
-        <li><a href="#" className="text-gray-600 hover:text-gray-900">Works</a></li>
-        <li><a href="#" className="text-gray-600 hover:text-gray-900">Career</a></li>
-      </ul>
-    </div>
-
-    {/* Help Links */}
-    <div>
-      <h3 className="font-bold mb-4">HELP</h3>
-      <ul className="space-y-3">
-        <li><a href="#" className="text-gray-600 hover:text-gray-900">Customer Support</a></li>
-        <li><a href="#" className="text-gray-600 hover:text-gray-900">Delivery Details</a></li>
-        <li><a href="#" className="text-gray-600 hover:text-gray-900">Terms & Conditions</a></li>
-        <li><a href="#" className="text-gray-600 hover:text-gray-900">Privacy Policy</a></li>
-      </ul>
-    </div>
-
-    {/* FAQ Links */}
-    <div>
-      <h3 className="font-bold mb-4">FAQ</h3>
-      <ul className="space-y-3">
-        <li><a href="#" className="text-gray-600 hover:text-gray-900">Account</a></li>
-        <li><a href="#" className="text-gray-600 hover:text-gray-900">Manage Deliveries</a></li>
-        <li><a href="#" className="text-gray-600 hover:text-gray-900">Orders</a></li>
-        <li><a href="#" className="text-gray-600 hover:text-gray-900">Payments</a></li>
-      </ul>
-    </div>
-
-    {/* Resources Links in a Single Column on Small Screens */}
-    <div className="md:col-span-1">
-      <h3 className="font-bold mb-4">RESOURCES</h3>
-      <ul className="space-y-3">
-        <li><a href="#" className="text-gray-600 hover:text-gray-900">Free eBooks</a></li>
-        <li><a href="#" className="text-gray-600 hover:text-gray-900">Development Tutorial</a></li>
-        <li><a href="#" className="text-gray-600 hover:text-gray-900">How to - Blog</a></li>
-        <li><a href="#" className="text-gray-600 hover:text-gray-900">Youtube Playlist</a></li>
-      </ul>
-    </div>
-    
-  </div>
-</div>
-
-
-      {/* Bottom Footer */}
-      <div className="border-t border-gray-200">
-        <div className="container mx-auto max-w-6xl px-4 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-gray-600 text-sm">
-            Shop.co © 2000-2023. All Rights Reserved
-          </p>
-          <div className="flex gap-4">
-  <Image src="/images/visa.png" alt="Visa"  className="h-[40px] w-[50px]" />
-  <Image src="/images/circle.png" alt="Mastercard" className="h-[40px] w-[50px]" />
-  <Image src="/images/paypal.png" alt="PayPal" className="h-[40px] w-[50px]" />
-  <Image src="/images/pay.png" alt="Apple Pay" className="h-[40px] w-[50px]" />
-  <Image src="/images/g pay.png" alt="Google Pay" className="h-[40px] w-[50px]" />
-</div>
-
-        </div>
-      </div>
-    </footer>
-  )
+         {/* bottom div */}
+         <div className="flex flex-col sm:flex-row justify-between items-center mt-3">
+                <p className="text-sm">Shop.co © 2000-2023, All Rights Reserved</p>
+                <div className="flex items-center ">
+                    <Image src={"/foot1.png"} className="w-[50px]" width={100} height={100} alt="pic"/>
+                    <Image src={"/foot1.png"} className="w-[50px]" width={100} height={100} alt="pic"/>
+                    <Image src={"/foot1.png"} className="w-[50px]" width={100} height={100} alt="pic"/>
+                    <Image src={"/foot1.png"} className="w-[50px]" width={100} height={100} alt="pic"/>
+                    <Image src={"/foot1.png"} className="w-[50px]" width={100} height={100} alt="pic"/>
+                </div>
+            </div>
+        </main>
+    )
 }
-
