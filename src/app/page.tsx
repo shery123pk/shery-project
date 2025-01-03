@@ -5,7 +5,8 @@ import Products from "./products/page";
 import Top_sell from "./products/sell";
 import Dress from "@/components/dress";
 import CustomerCarousel from "@/components/couresel";
-import Hero from "@/components/Hero";
+import Hero from "@/components/hero";
+
 
 
 
