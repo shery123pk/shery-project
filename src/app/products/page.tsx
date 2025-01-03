@@ -11,7 +11,7 @@ interface Iproducts{
     img_url:string
 }
 
-let product:Iproducts[] = [
+const product:Iproducts[] = [
     {
      title:"T-SHIRT WITH TAPE DETAILS",
      id:1,
@@ -42,7 +42,7 @@ let product:Iproducts[] = [
 ]
 
 // Adding key prop in star array
-let star = [
+const star = [
     <FaStar key={1} />,
     <FaStar key={2} />,
     <FaStar key={3} />,

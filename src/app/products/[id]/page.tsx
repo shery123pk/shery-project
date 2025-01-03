@@ -5,12 +5,12 @@ import { useParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Check, Minus, Plus } from "lucide-react";
 import AllReviw from "@/components/allreviws";
-import Products from "../page";
+
 import Tshirts from "@/components/products";
 import { BreadcrumbDemo } from "@/components/Bredcrupm";
 
 // Adding key prop in star array
-let star = [
+const star = [
   <FaStar key={1} />,
   <FaStar key={2} />,
   <FaStar key={3} />,
@@ -30,7 +30,7 @@ interface Iproducts{
     img3:string,
 }
 
-let product:Iproducts[] = [
+const product:Iproducts[] = [
     {
       title:"T-SHIRT WITH TAPE DETAILS",
       id:1,
